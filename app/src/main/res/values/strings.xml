@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Simple Note</string>
+    <string name="add_new_note">Nowy notatnik</string>
+    <string name="my_note">Moje notatki</string>
+    <string name="exit">Wyjdź</string>
+    <string name="my_list">Lista notatek</string>
+    <string name="save">Zapisz</string>
+    <string name="title">Tytuł</string>
+    <string name="enter_note">Wpisz notatkę</string>
+    <string name="add_success">Dodano notatkę!</string>
+    <string name="add_error">Uzupełnij tytuł i treść notatki!</string>
+</resources>
