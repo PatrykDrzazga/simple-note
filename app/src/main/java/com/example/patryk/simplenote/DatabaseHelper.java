@@ -6,7 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -76,5 +78,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             notelist.add(newNote);
         }
         return notelist;
+    }
+
+    public void deleteNote(Note note){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NAME, COL_ID + " = ?", new String[]{String.valueOf(note.getId())});
+        db.close();
+    }
+
+    public int updateNote(Note note, String title, String notes){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String currentDateandTime = sdf.format(new Date());
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_TITLE, title);
+        values.put(COL_NOTE, notes);
+        values.put(COL_DATE, currentDateandTime);
+        return db.update(TABLE_NAME, values, COL_ID + " = ?", new String[]{String.valueOf(note.getId())});
     }
 }

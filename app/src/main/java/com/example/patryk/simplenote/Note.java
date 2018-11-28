@@ -1,6 +1,8 @@
 package com.example.patryk.simplenote;
 
-public class Note {
+import java.io.Serializable;
+
+public class Note implements Serializable {
     private int icon;
     private String id;
     private String title;
@@ -26,6 +28,10 @@ public class Note {
 
     public void setIcon(){
         this.icon = icon;
+    }
+
+    public String getId(){
+        return id;
     }
 
     public String getTitle(){

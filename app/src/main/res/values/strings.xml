@@ -9,4 +9,7 @@
     <string name="enter_note">Wpisz notatkę</string>
     <string name="add_success">Dodano notatkę!</string>
     <string name="add_error">Uzupełnij tytuł i treść notatki!</string>
+    <string name="delete_button">Usuń</string>
+    <string name="delete_success">Notatka usunięta!</string>
+    <string name="update_success">Notatka zaktualizowana!</string>
 </resources>

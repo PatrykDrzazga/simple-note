@@ -1,5 +1,6 @@
 package com.example.patryk.simplenote;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,9 +37,10 @@ public class AddNew extends AppCompatActivity {
                 }
                 else{
                     db.addNote(title,note);
-                    add_title.setText("");
-                    add_note.setText("");
                     Toast.makeText(AddNew.this, R.string.add_success, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddNew.this, ListNotes.class);
+                    finish();
+                    startActivity(intent);
                 }
             }
         });

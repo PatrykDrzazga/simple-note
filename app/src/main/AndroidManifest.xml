@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/note"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/note"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddNew" />
-        <activity android:name=".ListNotes"></activity>
+        <activity android:name=".ListNotes" />
+        <activity android:name=".NoteView"></activity>
     </application>
 
 </manifest>
